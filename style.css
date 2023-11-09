@@ -73,11 +73,15 @@ button {
   width: 40%;
   margin: 3%;
   background-color: white;
+  margin-top: 3%;
 }
 
 input,
 textarea {
   width: 80%;
+}
+.botones {
+  margin-top: 3%;
 }
 
 .container-fluid {
