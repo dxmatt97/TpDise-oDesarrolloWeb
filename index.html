@@ -1,0 +1,119 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundacion Pierrot Fuensalida</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body onload=estaLogeado()>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Sitio Web</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Cursos
+          </a>
+          <ul class="dropdown-menu">
+            <li id="misCursos"><a class="dropdown-item" href="./miscursos.html">Mis Cursos</a></li>
+            <li><a class="dropdown-item" href="./listadocursos.html">Ver todo</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="userLogin"></a>
+        </li>
+        <li class="nav-item" id="botonLogin">
+          <a class="nav-link" href="./ingresar.html">Login</a>
+        </li>
+        <li class="nav-item" id="botonLogout">
+          <button class="btn" onclick="desLogear()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <!--<div id="contenido" class="container">  </div>-->
+    <div class="container-fluid">
+      <h2>Portal de cursos de la Fundación Fuensalida Pierrot</h2>
+      <p>Somos una empresa argentina de tecnología especializada en el diseño y desarollo web. </p>
+      <h4>¿Qué es el Desarrollo Web?</h4>
+      <p>El desarrollo web es el proceso de creación y mantenimiento de sitios web. El principal objetivo es los que
+        websites y las apps funcionen correctamente, sean eficientes, tengan dinamismo y buena organización.
+      </p>
+      <p>Entre las principales tecnologías utilizadas se encuentran HTML, CSS, JavaScript, PHP, Java y Python. </p>
+      <h4>Sobre la Fundación Fuensalida Pierrot</h4>
+      <p>Mathias Fuensalida y Paula Pierrot se conocieron el 2023 mientras ambos estudiaban en la Universiidad Argentina
+        De La Empresa, cuando tuvieron que realizar un trabajo práctico para la materia Diseño y Desarrollo Web.</p>
+      <p>Sus caminos volvieron a cruzarse cuando cursaron la materia "Dirección de Proyectos Informáticos". Apasionados
+        por lo que acaban de aprender, decidieron aprovechar el fuerte enfoque a los negocios de su universidad, y
+        fundar una empresa de consultoría informática especializada en el desarrollo web.</p>
+      <h4>Los cursos que ofrecemos</h4>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-4">
+            <h5>Introducción a Bootstrap</h5>
+            <p>Aprende a diseñar sitios web adaptables a cualquier dispositivo con Bootstrap. Descubre cómo trabajar con
+              maquetados fluidos, grillas y formularios.</p>
+
+          </div>
+          <div class="col-4">
+            <h5>HTML y CSS avanzado</h5>
+            <p>Eleva el nivel de tus interfaces con herramientas avanzadas de maquetación web. Descubre cómo crear
+              interfaces impactantes, profesionales y optimizadas.</p>
+          </div>
+          <div class="col-4">
+            <h5>Programación en JavaScript</h5>
+            <p>Domina los fundamentos de la programación a través de uno de los lenguajes más utilizados del mercado.
+              Aprende a generar desarrollos en entornos Web y Mobile.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <footer class="py-3 my-4">
+          <p class="text-center">© 2023 Fundación Pierrot Fuensalida - Contáctanos en
+            info@pierrotfuensalida.com</p>
+        </footer>
+      </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+  <!--
+  <script> 
+    $(document).ready(function () {
+      $("nav a").on("click", function (event) {
+        $("userLogin").html(document.cookie);
+        event.preventDefault();
+        var url = $(this).attr("href");
+        if (url !== '#') {
+          $("#contenido").empty();
+          $("#contenido").load(url);
+        }
+      });
+    });
+  </script>
+  -->
+</body>
+
+</html>

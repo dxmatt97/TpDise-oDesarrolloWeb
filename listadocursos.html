@@ -1,0 +1,190 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundacion Pierrot Fuensalida</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body onload=estaLogeado()>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Sitio Web</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Cursos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li id="misCursos"><a class="dropdown-item" href="./miscursos.html">Mis Cursos</a></li>
+                        <li><a class="dropdown-item" href="./listadocursos.html">Ver todo</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="userLogin"></a>
+                </li>
+                <li class="nav-item" id="botonLogin">
+                    <a class="nav-link" href="./ingresar.html">Login</a>
+                </li>
+                <li class="nav-item" id="botonLogout">
+                    <button class="btn" onclick="desLogear()">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h1>Cursos </h1>
+            <div class="container mt-4 fondo-curso-recomendado">
+                <h2>Cursos Recomendados</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://culture-lab.es/wp-content/uploads/2020/08/directivas-de-angular-programaci%C3%B3n.jpg"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Angular 15</h5>
+                                <p class="card-text">
+                                    Aprende a crear una interfaz de usuario CRUD Maestro/Detalle con el framework para
+                                    front-end más escalable y estructurado del mercado. Angular se caracteriza, sobre
+                                    todo, por su arquitectura modular altamente escalable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://www.icog.es/cursos/wp-content/uploads/2020/09/phyton.png"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Introducción a la Programación en Python</h5>
+                                <p class="card-text">Aprende Python, el lenguaje de programación más amigable y versátil
+                                    del mundo. Aprovecha sus beneficios y súmate a la comunidad en mayor crecimiento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://media.licdn.com/dms/image/C4E12AQFKaUVlyG_4eg/article-cover_image-shrink_720_1280/0/1622815253472?e=2147483647&v=beta&t=H_6RKwG96hNZd-9ymoUBIEOPxTyjgujMFVS-2NjtvoQ"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Diseño Gráfico Digital</h5>
+                                <p class="card-text">Aprende a comunicar visualmente tus ideas con las herramientas de
+                                    diseño gráfico que son el estándar de la industria.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div></br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://www.mobinius.com/wp-content/uploads/2020/02/reactjs-2.png"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 4">
+                            <div class="card-body">
+                                <h5 class="card-title">REACT.JS DEVELOPER</h5>
+                                <p class="card-text">
+                                    Domina el Framework JavaScript más demandado en la industria para el desarrollo
+                                    Front End. Aprende a construir un proyecto real desde cero utilizando las mejores
+                                    prácticas del mercado laboral.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://img-c.udemycdn.com/course/750x422/5157066_66bb.jpg"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 5">
+                            <div class="card-body">
+                                <h5 class="card-title">VUE.JS
+
+                                </h5>
+                                <p class="card-text">
+                                    Desde el auge del mobile, las empresas prefieren desarrollar aplicaciones reactivas.
+                                    Este tipo de desarrollos ha predominado, lo vemos tanto en un sitio web, como en una
+                                    app mobile; ya sea al 100% o en algunas partes. En cualquier caso necesitamos una
+                                    herramienta que nos facilite este tipo de creaciones y nos permita reusar lo que ya
+                                    hayamos hecho.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://www.repsol.com/content/dam/repsol-corporate/es/energia-e-innovacion/inteligencia-artificial-IA.jpg.transform/rp-rendition-md/image.jpg"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 6">
+                            <div class="card-body">
+                                <h5 class="card-title">INTELIGENCIA ARTIFICIAL</h5>
+                                <p class="card-text">
+                                    Aprende a potenciar tu trabajo profesional con la ayuda de la Inteligencia
+                                    Artificial y desbloquea nuevas oportunidades en la industria de la tecnología.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div><br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://miro.medium.com/v2/resize:fit:1358/1*4iLfbroFFkw2mJC3hURq_g.gif"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 4">
+                            <div class="card-body">
+                                <h5 class="card-title">RESPONSIVE WEB & BOOTSTRAP</h5>
+                                <p class="card-text">
+                                    Aprende a diseñar sitios web adaptables a cualquier dispositivo con Bootstrap.
+                                    Descubre cómo trabajar con maquetados fluidos, grillas y formularios.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://digitalcubik.com/wp-content/uploads/2022/05/ux-ui-digital-cubik.jpg"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 5">
+                            <div class="card-body">
+                                <h5 class="card-title">DISEÑO UI/UX</h5>
+                                <p class="card-text">Especialízate en la creación y gestión de experiencias de usuario
+                                    en interfaces digitales con expertos que trabajan en la industria.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://images.ctfassets.net/3viuren4us1n/7K9DDidhIWIF6OaIvL3m8u/c80eaefd6f8eb2a498c265aa9407f7ec/QA_testing_-_resized.jpg"
+                                class="card-img-top card-imagen-cursorecomendado" alt="Curso 6">
+                            <div class="card-body">
+                                <h5 class="card-title">TESTING QA</h5>
+                                <p class="card-text">
+                                    Inicia tu camino como Tester Experto, la profesión con alto nivel de ocupación
+                                    laboral. Sé quién asegura la calidad del software y conviértete en un verdadero QA
+                                    Manager.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jumbotron mt-5 text-center">
+                    <h1 class="display-4">Próximamente más cursos !</h1>
+                    <p class="lead">Estamos trabajando en nuevos cursos para ti. ¡Te esperamos!</p>
+                    <img src="https://png.pngtree.com/png-vector/20221216/ourmid/pngtree-young-programmer-working-at-home-png-image_6525735.png" width="250px" height="auto">
+                   </div>
+                <footer class="py-3 my-4">
+                    <p class="text-center">© 2023 Fundación Pierrot Fuensalida - Contáctanos en
+                        info@pierrotfuensalida.com</p>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

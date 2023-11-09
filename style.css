@@ -1,0 +1,87 @@
+.card-imagen-curso {
+  width: 160px;
+  height: auto;
+  ;
+}
+
+.card-imagen-cursorecomendado {
+  width: auto;
+  height: 130px;
+  ;
+}
+
+.fondo-curso-recomendado {
+  background-color: #ffeecc;
+  /* Fondo de color claro para destacar */
+  border: 1px solid #f0c34a;
+  /* Borde personalizado */
+  padding: 15px;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+header a {
+  color: white;
+  padding: 20px;
+}
+
+header a:hover {
+  color: blueviolet;
+  background-color: white;
+  text-decoration: none;
+}
+
+header {
+  text-align: right;
+  background-color: blueviolet;
+}
+
+.encabezado-fluid {
+  padding: 3%
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+#menu li {
+  padding: 3%;
+}
+
+footer {
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  padding: 3%;
+}
+
+form {
+  text-align: center;
+  margin-top: 3%;
+}
+
+button {
+  width: 40%;
+  margin: 3%;
+  background-color: white;
+}
+
+input,
+textarea {
+  width: 80%;
+}
+
+.container-fluid {
+  text-align: center;
+  padding-top: 3%;
+
+}
